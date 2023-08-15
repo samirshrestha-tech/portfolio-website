@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+/* reducing repetition */
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  /* it will absorb any color the parent element have */
+}
+/* ----root variables--- */
+
+:root {
+  --color-orange: rgb(230, 166, 47);
+  --color-dark: rgb(32, 30, 30);
+
+  --body-bg: #fff;
+  --text-color: var(var(--color-dark));
+  --border-color: var(var(--color-dark));
+
+  --dark-bg: var(var(--color-dark));
+  --dark-text-color: #fff;
+  --dark-border-color: #fff;
+}
+.wrapper {
+  background: var(--body-bg);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+#me {
+  text-align: center;
+}
+#me span {
+  border-bottom: 0.5rem solid orange;
+}
+
+/* dark mode */
+
+/* header */
+
+header {
+  box-shadow: 0 0 10px 5px grey;
+  position: sticky;
+  top: 0;
+  background: var(--body-bg);
+}
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.3rem;
+}
+
+.line::before {
+  content: "";
+  width: 8px;
+  height: 75%;
+
+  position: absolute;
+  left: 20%;
+  background: var(--color-orange);
+}
+
+.navigation {
+  list-style: none;
+}
+.navigation li a:hover {
+  color: var(--color-orange);
+  transition: all 0.5s;
+}
+.logo > div:nth-child(1) {
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+#dark-mode {
+  display: none;
+}
+.dark-mode-toggle:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.dark-mode-toggle {
+  position: fixed;
+  top: 8rem;
+  left: 3rem;
+  background: #fff;
+}
+/* dark mode activation */
+#dark-mode:checked + .wrapper {
+  background: #000 !important;
+}
+
+/* ============ hero section ==========  */
+
+.hero-section {
+  padding-top: 10rem;
+  color: var(--text-color);
+}
+
+.hero {
+  grid-template-areas: "left right";
+  background: var(--color-orange);
+  padding: 0 2rem;
+}
+
+.left {
+  grid-area: left;
+
+  justify-content: center;
+  align-items: center;
+  margin-left: 10vw;
+  flex-direction: column;
+}
+
+.left .name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.left button {
+  background: var(--dark-bg);
+  padding: 10px 2rem;
+  border-radius: 2rem;
+  color: var(--body-bg);
+}
+
+.left .tag {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+
+.right {
+  grid-area: right;
+  justify-content: baseline;
+  align-items: center;
+  margin-top: -4rem;
+}
+
+.right img {
+  height: 105%;
+  /* box-shadow: 10px black; */
+}
+
+/* banner section */
+.banner {
+  background: purple;
+  margin-top: 7rem;
+  border: 2px solid var(--border-color);
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+}
+.banner .info-divider {
+  background: grey;
+  width: 2px;
+  height: 50px;
+}
+.banner .info-content .icon-container {
+  background: var(--color-orange);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.banner .info-content .icon-container {
+  font-size: 2rem;
+  color: white;
+}
+.banner .info-content span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+.banner .info-content p {
+  color: var(--color-orange);
+}
+/* skills */
+.skills {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 7rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+/* my approach */
+.htm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.htm i {
+  color: orange;
+  font-size: 5rem;
+}
+.css {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.css i {
+  color: blue;
+  font-size: 5rem;
+}
+.js {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.js i {
+  color: rgb(234, 234, 32);
+  font-size: 5rem;
+}
+
+.git {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.git i {
+  color: black;
+  font-size: 5rem;
+}
+/* class approach */
+/* .skills > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills > div i {
+  font-size: 5rem;
+} */
+
+/* projects */
+.projects {
+  margin-top: 3rem;
+  padding: 7rem 0;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.projects .project-container {
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.project-card {
+  box-shadow: -1px 14px 20px 8px rgba(108, 102, 102, 0.552);
+  border-radius: 10px;
+}
+.project-card .top img {
+  width: 100%;
+}
+
+/* about */
+.about {
+  padding-top: 5rem;
+}
+.about-content {
+  margin-top: 2rem;
+}
+.about-content .myImg {
+  width: 55%;
+}
+.about-content .myImg img {
+  max-width: 400px;
+  min-width: 300px;
+}
+.about-content .my-bio h2 {
+  font-size: 2rem;
+  margin-bottom: 2;
+}
+.my-bio p:nth-child(4) {
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+.my-bio .tag + div span {
+  padding: 0.8rem 1.1rem;
+  border-radius: 5px;
+}
+.my-bio .tag + div span:hover {
+  cursor: pointer;
+  background: orangered;
+}
