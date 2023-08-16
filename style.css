@@ -250,6 +250,16 @@ header {
   color: black;
   font-size: 5rem;
 }
+.figma {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.figma i {
+  font-size: 5rem;
+}
 /* class approach */
 /* .skills > div {
   display: flex;
