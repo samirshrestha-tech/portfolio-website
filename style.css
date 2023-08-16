@@ -101,11 +101,16 @@ header {
   position: fixed;
   top: 8rem;
   left: 3rem;
-  background: #fff;
 }
 /* dark mode activation */
 #dark-mode:checked + .wrapper {
   background: #000 !important;
+  color: #fff;
+}
+/* this doesn't apply the dark mode on nav bar and makes it visible */
+#dark-mode:checked + .wrapper header {
+  background: black !important;
+  color: white;
 }
 
 /* ============ hero section ==========  */
