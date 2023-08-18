@@ -339,7 +339,6 @@ header {
   background: burlywood;
   width: 100%;
   margin: 2rem 0;
-  border-radius: 1.3rem;
 }
 .touch {
   display: flex;
@@ -350,16 +349,6 @@ header {
   font-size: 3rem;
 }
 .mail {
-  border: 2px solid black;
+  border: ;
   background: black;
-  border-radius: 30px;
-  color: white;
-  width: 100px;
-  text-align: center;
-  height: 1.5rem;
-  margin-bottom: 20px;
-}
-.mail i {
-  color: rgba(241, 241, 14, 0.79);
-  padding-left: 10px;
 }
