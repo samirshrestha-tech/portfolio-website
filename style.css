@@ -363,3 +363,30 @@ header {
   color: rgba(241, 241, 14, 0.79);
   padding-left: 10px;
 }
+/* footer section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  background: #000;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer .links > ul {
+  list-style-type: none;
+}
+.footer .social > ul {
+  list-style-type: none;
+}
+.links {
+  text-align: center;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.copyright {
+}
