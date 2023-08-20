@@ -373,6 +373,7 @@ header {
   background: #000;
   color: #fff;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 .footer .links > ul {
   list-style-type: none;
