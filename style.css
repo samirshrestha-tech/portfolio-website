@@ -381,6 +381,7 @@ header {
   width: 50%;
   padding: 10px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .links ul,
@@ -403,4 +404,25 @@ header {
 .social {
   border-left: 1px solid #ccc;
   padding-left: 20px;
+}
+.bottom {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .links,
+  .social {
+    width: 100%;
+  }
+
+  .social {
+    border-left: none;
+    padding-left: 0;
+  }
 }
