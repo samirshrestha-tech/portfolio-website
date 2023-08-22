@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -253,6 +256,7 @@ header {
 }
 .git i {
   color: black;
+  background: #fff;
   font-size: 5rem;
 }
 .figma {
@@ -425,4 +429,65 @@ header {
     border-left: none;
     padding-left: 0;
   }
+  .hero {
+    grid-template-areas:
+      "left"
+      "right";
+  }
+  .right img {
+    width: 100%;
+  }
+  .banner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.banner .info-divider {
+ display: none;
+}
+.about-content {
+ flex-direction: column;
+ 
+}
+
+
+/* 
+.contact{
+  padding-top:7rem;
+
+}
+*/
+.foote {
+  padding: 3rem;
+}
+.footer.top {
+  justify-content: center;
+  gap: 6rem;
+}
+.upbottom {
+  background: orange;
+  width: 20px;
+  height: 50px;
+  transform: rotate(360deg);
+  color: black;
+  transform: scale();
+}
+.upbottom .arrow {
+  transform: rotate(360deg);
+  transform: scale(1.3rem);
+}
+
+/* go up button */
+
+.go-up {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-orange);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  justify-content: center;
+  align-items: center;
 }
